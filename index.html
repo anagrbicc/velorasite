@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1D1C19">
+<meta name="description" content="VELORA — a Tuscan estate of travertine, oak and glass. A cinematic journey from the vineyard to the cellar, and three wines from one hillside. A fictional winery design study.">
+<meta name="author" content="VELORA">
+<meta name="theme-color" content="#1D1C19">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VELORA">
+<meta property="og:title" content="VELORA — Where Time Becomes Wine">
+<meta property="og:description" content="A legacy rooted in Tuscany — three generations of passion, patience and devotion to the art of winemaking. A fictional winery design study.">
+<meta property="og:image" content="./media/s01-start-720.webp">
+<meta name="twitter:card" content="summary_large_image">
+<title>VELORA — Tenuta in Toscana</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231D1C19'/%3E%3Cpath d='M18 20l14 26 14-26' fill='none' stroke='%23BBA17B' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="preload" href="./fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./media/s01-start-720.webp" as="image" fetchpriority="high" media="(min-width: 821px)">
+<link rel="preload" href="./media/s01-start-p.webp" as="image" fetchpriority="high" media="(max-width: 820px) and (orientation: portrait)">
+<link rel="preload" href="./media/s01-start-540.webp" as="image" fetchpriority="high" media="(max-width: 820px) and (orientation: landscape)">
+  <script type="module" crossorigin src="./assets/index-DhsfqBP8.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Hc-S2Cqn.css">
+</head>
+<body>
+  <a class="skip" href="#collection">Skip to the collection</a>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" data-scroll="top" aria-label="VELORA, back to the top">VELORA</a>
+    <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu"><span></span><span></span></button>
+    <nav class="nav__menu" id="nav-menu" aria-label="Primary">
+      <a href="#estate" data-scroll="film">About Us</a>
+      <a href="#collection" data-scroll="collection">Our Offer</a>
+      <a href="#visit" data-scroll="visit">Contact</a>
+    </nav>
+  </header>
+
+  <!-- the film: one fixed stage, scenes stacked inside it, driven by the scroll track below -->
+  <div class="stage" id="stage" aria-hidden="true">
+    <div class="stage__frame" id="frame"></div>
+    <div class="stage__scrim"></div>
+    <div class="stage__veil" id="veil"></div>
+  </div>
+
+  <main id="top">
+    <section class="hero" id="hero" aria-label="VELORA, a Tuscan estate">
+      <div class="hero__inner">
+        <h1 class="hero__title">VELORA<span>Where Time Becomes Wine</span></h1>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#collection" data-scroll="collection">Explore Our Wines</a>
+          <a class="btn" href="#visit" data-scroll="visit">Contact Us</a>
+        </div>
+      </div>
+      <a class="hero__scroll" href="#estate" data-jump="0" aria-label="Scroll to explore the estate">
+        <span>Scroll to Explore</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <section class="film" id="film" aria-label="The estate, a film in four chapters">
+      <div class="captions" id="captions"></div>
+      <div class="rail" id="rail" aria-hidden="true"><i></i></div>
+      <p class="loading" id="loading" aria-live="polite">Loading film</p>
+      <div class="film__track" id="film-track"></div>
+      <div class="film__transition" id="transition">
+        <p class="transition__line" id="transition-line"><span>05</span>The Collection</p>
+      </div>
+    </section>
+
+    <section class="collection" id="collection" aria-labelledby="collection-title">
+      <header class="collection__intro">
+        <h2 id="collection-title">A legacy in every bottle.</h2>
+        <p class="lede">Discover three distinctive expressions of VELORA, each reflecting the character of our vineyards, the knowledge of generations, and our dedication to the art of winemaking.</p>
+      </header>
+      <div id="wines"></div>
+    </section>
+
+    <section class="experiences" id="experiences" aria-labelledby="exp-title">
+      <header class="section-head reveal">
+        <h2 id="exp-title">An Invitation to Experience VELORA</h2>
+        <p class="lede">Beyond the bottle, the estate opens its doors. Choose a tasting or a tour, and spend an afternoon where the wine is made.</p>
+      </header>
+      <div class="exp-grid" id="exp-grid"></div>
+      <p class="exp-foot">Choose an experience above to request a date in the booking form below.</p>
+    </section>
+
+    <section class="testimonials" id="testimonials" aria-labelledby="tst-title">
+      <header class="section-head reveal">
+        <h2 id="tst-title">Moments Worth Remembering</h2>
+        <p class="lede">Fictional sample testimonials, written to illustrate this design study.</p>
+      </header>
+      <div class="carousel" id="tst-carousel" role="group" aria-roledescription="carousel" aria-label="Guest testimonials" tabindex="0">
+        <button class="carousel__nav carousel__prev" id="tst-prev" type="button" aria-label="Previous testimonial">&#8249;</button>
+        <div class="carousel__viewport"><div class="carousel__track" id="tst-track"></div></div>
+        <button class="carousel__nav carousel__next" id="tst-next" type="button" aria-label="Next testimonial">&#8250;</button>
+      </div>
+      <div class="carousel__dots" id="tst-dots"></div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <header class="section-head reveal">
+        <h2 id="faq-title">Before you visit</h2>
+        <p class="lede">A few practical notes for planning your time at the estate.</p>
+      </header>
+      <div class="faq-list" id="faq-list"></div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="visit__head">
+        <h2 id="visit-title">Visit VELORA</h2>
+        <p class="visit__sub">Come Closer to VELORA.</p>
+        <p class="lede">Beyond every bottle lies a story worth discovering. We invite you to experience the tradition, passion, and character that make VELORA unique.</p>
+      </div>
+
+      <div class="visit__grid">
+        <form class="form booking" id="booking" novalidate aria-label="Request a booking">
+          <p class="form__intro">Choose an experience and a date, and we'll be in touch to confirm your visit.</p>
+          <div class="field">
+            <label for="b-exp">Experience</label>
+            <select id="b-exp" name="experience" required aria-describedby="e-b-exp"></select>
+            <span class="field__error" id="e-b-exp" aria-live="polite"></span>
+          </div>
+          <div class="booking__row">
+            <div class="field">
+              <label for="b-date">Date</label>
+              <input id="b-date" name="date" type="date" required aria-describedby="e-b-date">
+              <span class="field__error" id="e-b-date" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="b-guests">Guests</label>
+              <input id="b-guests" name="guests" type="number" min="1" max="12" value="2" required aria-describedby="e-b-guests">
+              <span class="field__error" id="e-b-guests" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="b-name">Name</label>
+            <input id="b-name" name="name" type="text" autocomplete="name" required aria-describedby="e-b-name">
+            <span class="field__error" id="e-b-name" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="b-email">Email</label>
+            <input id="b-email" name="email" type="email" autocomplete="email" required aria-describedby="e-b-email">
+            <span class="field__error" id="e-b-email" aria-live="polite"></span>
+          </div>
+          <button class="btn btn--solid" type="submit">Request booking</button>
+          <p class="booking__note">Demonstration booking — no reservation is made and no payment is taken. Sample schedule: Tuesday to Saturday, 11:00 · 14:00 · 16:30.</p>
+          <p class="form__status" id="booking-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="visit__aside">
+          <div class="visit__map" id="map" data-src="https://www.google.com/maps?q=Montalcino,+Siena,+Toscana,+Italy&z=11&output=embed">
+            <div class="visit__map-fallback">
+              <p class="visit__map-place">Montalcino<span>Val d'Orcia · Toscana</span></p>
+              <a class="visit__map-link" href="https://www.google.com/maps/place/Montalcino,+Province+of+Siena,+Italy" target="_blank" rel="noopener">Open in Google Maps</a>
+            </div>
+          </div>
+          <p class="visit__map-note">Location shown is illustrative for this fictional estate.</p>
+
+          <dl class="visit__details">
+            <div><dt>Estate</dt><dd>Strada delle Colline 18<br>53024 Montalcino (SI), Italia</dd></div>
+            <div><dt>Hours</dt><dd>Tuesday to Saturday<br>By appointment</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:visit@velora.example">visit@velora.example</a></dd></div>
+            <div><dt>Phone</dt><dd><a href="tel:+390577000000">+39 0577 000 000</a></dd></div>
+          </dl>
+
+          <ul class="visit__social" aria-label="Social media">
+            <li><a href="#" aria-disabled="true">Instagram</a></li>
+            <li><a href="#" aria-disabled="true">Facebook</a></li>
+            <li><a href="#" aria-disabled="true">Journal</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__grid">
+        <div>
+          <p class="footer__brand">VELORA</p>
+          <p class="footer__line">Tenuta in Toscana</p>
+        </div>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="#estate" data-jump="0">Estate</a>
+          <a href="#cellar" data-jump="2">Cellar</a>
+          <a href="#experience" data-jump="3">Experience</a>
+          <a href="#collection" data-jump="collection">Collection</a>
+          <a href="#visit" data-jump="visit">Visit</a>
+        </nav>
+      </div>
+      <p class="footer__legal">VELORA is a fictional estate created as a design study. It is not a real winery; the address, contact details and map are illustrative. Please enjoy wine responsibly.</p>
+    </footer>
+  </main>
+
+  <div class="detail" id="detail" role="dialog" aria-modal="true" aria-labelledby="detail-title" hidden></div>
+
+  <div class="hud" id="hud" hidden></div>
+</body>
+</html>
